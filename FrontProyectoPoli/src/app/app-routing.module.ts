@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'ProyectoPoliRiesgos',
     pathMatch: 'full'
   },
   {
@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
+  },
+  {
+    path: 'login',
+    loadChildren: './login/login.module#LoginComponentModule'
+  },
+  {
+    path: 'user-registration',
+    loadChildren: './user-registration/registration.module#UserRegistrationComponentModule'
   }
 ];
 
