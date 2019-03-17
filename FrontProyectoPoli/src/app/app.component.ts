@@ -26,9 +26,9 @@ export class AppComponent {
       icon: 'login'
     },
     {
-      title: 'User-registration',
-      url: '/user-registration',
-      icon: 'user-registration'
+      title: 'Registration',
+      url: '/registration',
+      icon: 'registration'
     }
   ];
 
