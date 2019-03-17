@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginComponentModule'
   },
   {
-    path: 'user-registration',
+    path: 'registration',
     loadChildren: './user-registration/registration.module#UserRegistrationComponentModule'
   }
 ];
