@@ -8,20 +8,24 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
+    path: 'trends',
+    loadChildren: './catalogue/trends/trends.module#TrendsPageModule'
   },
   {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
+    path: 'explorer',
+    loadChildren: './catalogue/explorer/explorer.module#ExplorerPageModule'
   },
   {
     path: 'login',
-    loadChildren: './login/login.module#LoginComponentModule'
+    loadChildren: './access/login/login.module#LoginComponentModule'
   },
   {
     path: 'registration',
-    loadChildren: './user-registration/registration.module#UserRegistrationComponentModule'
+    loadChildren: './access/user-registration/registration.module#UserRegistrationComponentModule'
+  },
+  {
+    path: 'profile',
+    loadChildren: './catalogue/profile/profile.module#ProfilePageModule'
   }
 ];
 
@@ -29,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
-import * as $ from 'jquery'
 
 @Component({
   selector: 'app-user-registration',
