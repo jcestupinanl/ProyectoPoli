@@ -1,4 +1,53 @@
-<ion-content>
-    <ion-button (click)="login()" shpae="round">Inisiar Sesion</ion-button>
-    <ion-button [routerLink]="['/registration']" shpae="round">registrarse</ion-button>
-</ion-content>
+<ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start"></ion-buttons>
+            <ion-title style="text-align: center">
+                Bienvenido
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+            <form (ngSubmit)="saveData()">
+              <ion-list>
+                <ion-item>
+                  <ion-icon name="person" item-start></ion-icon>                 
+				  <ion-label stacked>Email:</ion-label>
+                  <ion-input type="text" placeholder="Email"></ion-input>
+                </ion-item>
+               
+                  <ion-item>
+                    <ion-icon name="eye" item-start></ion-icon>
+                    <ion-label stacked>contrase&#241;a:</ion-label>
+                    <ion-input type="password" placeholder="Contrase&#241;a"></ion-input>
+                  </ion-item> 
+                  <p>
+				  <ion-row>
+				  <ion-col text-center>
+                   <a [routerLink]="['/forgot-password']">Olvide mi contrase&#241;a?</a>
+                  </ion-col>				
+				  </ion-row>
+				  <p>
+				   <ion-row>
+				  <ion-col text-center>
+                   <a [routerLink]="['/registration']">Quieres registrarte?</a>
+				    </ion-col>				
+				  </ion-row>
+				   <p>
+				   <ion-row>
+				  <ion-col text-center>
+				    <ion-button (click)="login()" shpae="round" style="width:200px;">Inisiar Sesion</ion-button>
+					  </ion-col>				
+				  </ion-row>
+				   <ion-row>
+				  <ion-col text-center>
+					<ion-button shpae="round" size="default" color="primary" >
+      <ion-icon name="logo-facebook"></ion-icon>
+       Registrarme con Facebook 
+    </ion-button>
+                    </ion-col>				
+				  </ion-row>
+			 </ion-list>
+              <div padding>
+              </div>
+            </form>
+          </ion-content>
