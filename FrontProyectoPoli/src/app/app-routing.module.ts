@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: './catalogue/profile/profile.module#ProfilePageModule'
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: './access/forgot-password/forgot-password.module#ForgotPasswordPageModule'
   }
 ];
 
