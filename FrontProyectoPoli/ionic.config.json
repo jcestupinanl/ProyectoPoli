@@ -1,6 +1,8 @@
 {
   "name": "FrontProyectoPoli",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "2434add4"
 }
