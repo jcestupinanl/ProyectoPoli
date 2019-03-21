@@ -80,7 +80,6 @@ export class UserRegistrationComponent implements OnInit {
   "Ospina","Pasto","Policarpa","Potos\u00ed","Providencia","Puerres","Pupiales","Ricaurte","Roberto Pay\u00e1n","Samaniego","San Bernardo","San Jos\u00e9 de Alb\u00e1n",
   "San Lorenzo","San Pablo","San Pedro de Cartago","Sandon\u00e1","Santa B\u00e1rbara","Santacruz","Sapuyes","Taminango","Tangua","Tumaco","T\u00faquerres","Yacuanquer"];
   
-
   error_messages = {
     'nombres': [
       { type: 'required', message: 'Los nombres son obligatorios.' },
