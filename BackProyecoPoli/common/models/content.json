@@ -1,0 +1,43 @@
+{
+  "name": "content",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "advanceContents": {
+      "type": "hasMany",
+      "model": "advanceContent",
+      "foreignKey": "content_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "typePeople": {
+      "type": "hasMany",
+      "model": "typePerson",
+      "foreignKey": "content_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "detailContents": {
+      "type": "hasMany",
+      "model": "detailContent",
+      "foreignKey": "content_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
