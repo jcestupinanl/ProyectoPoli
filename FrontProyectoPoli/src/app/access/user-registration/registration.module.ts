@@ -21,4 +21,6 @@ import { UserRegistrationComponent } from './user-registration.component';
   ],
   declarations: [UserRegistrationComponent]
 })
-export class UserRegistrationComponentModule {}
+export class UserRegistrationComponentModule {
+  
+}

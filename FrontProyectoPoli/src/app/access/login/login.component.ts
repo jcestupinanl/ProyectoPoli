@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
       { type: 'pattern', message: 'Escribir mínimo una letra minúscula, una letra mayúscula, un número y un caracter especial.' }
     ]
   }
-
   constructor(
     public formBuilder: FormBuilder,
     public _route: Router
@@ -41,10 +40,8 @@ export class LoginComponent implements OnInit {
       ])
     })
   }
-
   login(){
     this._route.navigateByUrl('/trends');
   }
-
   ngOnInit() {}
 }
