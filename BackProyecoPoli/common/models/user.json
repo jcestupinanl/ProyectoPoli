@@ -1,0 +1,74 @@
+{
+  "name": "user",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "token": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "notifications": {
+      "type": "hasMany",
+      "model": "notifications",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "typePeople": {
+      "type": "hasMany",
+      "model": "typePerson",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "advanceContents": {
+      "type": "hasMany",
+      "model": "advanceContent",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "detailContents": {
+      "type": "hasMany",
+      "model": "detailContent",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

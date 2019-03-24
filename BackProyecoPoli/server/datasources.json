@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "PostgresDs": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "postgres://postgres:admin@localhost:5432/risk",
+    "database": "risk",
+    "password": "admin",
+    "name": "PostgresDs",
+    "user": "postgres",
+    "connector": "postgresql"
   }
 }

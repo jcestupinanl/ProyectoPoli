@@ -1,0 +1,27 @@
+{
+  "name": "typeRisk",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "typeRisks": {
+      "type": "hasMany",
+      "model": "typeRisk",
+      "foreignKey": "type_risk_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
