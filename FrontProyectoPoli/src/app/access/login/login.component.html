@@ -1,53 +1,61 @@
-<ion-header>
-        <ion-toolbar>
-            <ion-buttons slot="start"></ion-buttons>
-            <ion-title style="text-align: center">
-                Bienvenido
-            </ion-title>
-        </ion-toolbar>
-    </ion-header>
-    <ion-content>
-            <form (ngSubmit)="saveData()">
-              <ion-list>
-                <ion-item>
-                  <ion-icon name="person" item-start></ion-icon>                 
-				  <ion-label stacked>Email:</ion-label>
-                  <ion-input type="text" placeholder="Email"></ion-input>
-                </ion-item>
-               
-                  <ion-item>
-                    <ion-icon name="eye" item-start></ion-icon>
-                    <ion-label stacked>contrase&#241;a:</ion-label>
-                    <ion-input type="password" placeholder="Contrase&#241;a"></ion-input>
-                  </ion-item> 
-                  <p>
-				  <ion-row>
-				  <ion-col text-center>
-                   <a [routerLink]="['/forgot-password']">Olvide mi contrase&#241;a?</a>
-                  </ion-col>				
-				  </ion-row>
-				  <p>
-				   <ion-row>
-				  <ion-col text-center>
-                   <a [routerLink]="['/registration']">Quieres registrarte?</a>
-				    </ion-col>				
-				  </ion-row>
-				   <p>
-				   <ion-row>
-				  <ion-col text-center>
-				    <ion-button (click)="login()" shpae="round" style="width:200px;">Inisiar Sesion</ion-button>
-					  </ion-col>				
-				  </ion-row>
-				   <ion-row>
-				  <ion-col text-center>
-					<ion-button shpae="round" size="default" color="primary" >
-      <ion-icon name="logo-facebook"></ion-icon>
-       Registrarme con Facebook 
-    </ion-button>
-                    </ion-col>				
-				  </ion-row>
-			 </ion-list>
-              <div padding>
-              </div>
-            </form>
-          </ion-content>
+<ion-content padding>
+  <div class="d-table w-100 h-100">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="d-table-cell vertical-middle" >
+      <div class="text-center w-100" style="margin-bottom: 15px">
+        <img src="../../../assets/icon/logo.PNG" width="200px"/>
+      </div>
+      <ion-list class="m-0">
+        <ion-item>
+          <ion-icon name="mail" item-start class="icon-color" style="margin: -4px 7px 0 0"></ion-icon>
+          <ion-input formControlName='email' type="email" placeholder="Correo electrónico"></ion-input>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.email">
+            <div class="error-message" *ngIf="loginForm.get('email').hasError(error.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+        <ion-item style="margin-top: 10px">
+          <ion-icon name="lock" item-start class="icon-color" style="margin: -4px 7px 0 0"></ion-icon>
+          <ion-input formControlName='password' type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.password">
+            <div class="error-message" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+        <p style="margin: 14px 0 0 0">
+        <ion-row>
+          <ion-col text-center>
+            <a [routerLink]="['/forgot-password']">¿Olvidé mi contraseña?</a>
+          </ion-col>				
+        </ion-row>
+        <p style="margin: 0">
+        <ion-row>
+          <ion-col text-center>
+            <a [routerLink]="['/registration']">¿Quieres registrarte?</a>
+          </ion-col>				
+        </ion-row>
+        <p style="margin: 14px 0 0 0">
+        <ion-row>
+          <ion-col style="padding: 0" text-center>
+            <ion-button [disabled]="!loginForm.valid" type="submit" shpae="round" size="default" color="primary" expand="block">
+              Iniciar Sesión
+            </ion-button>
+          </ion-col>				
+        </ion-row>
+        <ion-row>
+          <ion-col style="padding: 0" text-center>
+            <ion-button disabled shpae="round" size="default" color="primary" expand="block">
+              <ion-icon name="logo-facebook"></ion-icon>  
+              Iniciar con Facebook 
+            </ion-button>
+          </ion-col>				
+        </ion-row>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>
