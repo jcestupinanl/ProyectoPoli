@@ -1,27 +1,84 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      List
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
-</ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Explorador de Contenido
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>    
+          <ion-item>
+            <ion-label>Edad</ion-label>
+            <ion-select placeholder="Select One">
+              <ion-select-option value="18">18</ion-select-option>
+              <ion-select-option value="19">19</ion-select-option>
+              <ion-select-option value="20">20</ion-select-option>
+              <ion-select-option value="21">21</ion-select-option>
+              <ion-select-option value="22">22</ion-select-option>
+              <ion-select-option value="23">23</ion-select-option>
+              <ion-select-option value="24">24</ion-select-option>
+              <ion-select-option value="25">25</ion-select-option>
+              <ion-select-option value="26">26</ion-select-option>
+              <ion-select-option value="27">27</ion-select-option>
+              <ion-select-option value="28">28</ion-select-option>
+              <ion-select-option value="29">29</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Ciudad</ion-label>
+            <ion-select placeholder="Select One">
+              <ion-select-option value="Cali">Cali</ion-select-option>
+              <ion-select-option value="Bogota">Bogota</ion-select-option>
+              <ion-select-option value="Bucaramanga">Bucaramanga</ion-select-option>
+              <ion-select-option value="Medellin">Medellin</ion-select-option>
+            </ion-select>
+          </ion-item> 
+          
+          <ion-item>
+            <ion-label>Desastre</ion-label>
+            <ion-select placeholder="Select One">
+              <ion-select-option value="Terremoto">Terremoto</ion-select-option>
+              <ion-select-option value="Tsunami">Tsunami</ion-select-option>
+              <ion-select-option value="Inundacion">Inundacion</ion-select-option>
+              <ion-select-option value="Incendio">Incendio</ion-select-option>
+            </ion-select>
+          </ion-item>  
+          <ion-row>
+            <ion-col style="padding: 0" text-center>
+              <ion-button [disabled]="!loginForm.valid" type="submit" shpae="round" size="default" color="primary" expand="block">
+                Buscar
+              </ion-button>
+            </ion-col>				
+          </ion-row>  
+        </ion-list>
+      </ion-content>
+        <ion-content>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="deserted">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Te falta!</ion-label>
+            <ion-badge>6</ion-badge>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="speakers">
+            <ion-icon name="pause"></ion-icon>
+            <ion-label>Te olvidaste</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="stats">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <ion-label>Realizado</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="about">
+            <ion-icon name="stats"></ion-icon>
+            <ion-label>Estadisticas</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+  </ion-content>
