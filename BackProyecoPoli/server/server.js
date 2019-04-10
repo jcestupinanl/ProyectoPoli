@@ -27,3 +27,18 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+// referencia a la datasource
+
+var ds = app.dataSources.PostgresDs;
+
+// verifica si algo cambio
+
+ds.isActual(function(err, actual) {
+  if (!actual) {
+    ds.autoupdate(function(err) {
+      if (err) throw (err);
+    });
+    console.log('UPDATED DB FROM MODEL');
+  }
+});

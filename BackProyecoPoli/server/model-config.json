@@ -34,5 +34,49 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "advanceContent": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "state": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "typeContent": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "stage": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "typeRisk": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "city": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "typePerson": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "notifications": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "user": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "content": {
+    "dataSource": "PostgresDs",
+    "public": true
+  },
+  "detailContent": {
+    "dataSource": "PostgresDs",
+    "public": true
   }
 }
